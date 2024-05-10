@@ -3,11 +3,8 @@ import java.util.*;
 public class Solution {
     public int solution(int n) {
         int answer = 0;
-        int num = n;
-        int d = 10;
-        while(num!=0){
-            answer+=num%d;
-            num=num/d;
+        for(int i=n; i>0; i=i/10){
+            answer+=i%10;
         }
         return answer;
     }
