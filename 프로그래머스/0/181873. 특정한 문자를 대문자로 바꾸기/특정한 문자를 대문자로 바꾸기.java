@@ -4,7 +4,7 @@ class Solution {
         String str[] = my_string.split("");
         for(int i=0; i<str.length; i++){
             if(str[i].equals(alp)){
-                str[i]=(char)(str[i].charAt(0)-32)+"";
+                str[i]=str[i].toUpperCase();
             }
             answer+=str[i];
         }
