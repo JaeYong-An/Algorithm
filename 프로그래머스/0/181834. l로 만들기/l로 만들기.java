@@ -1,12 +1,12 @@
 class Solution {
     public String solution(String myString) {
         String answer = "";
-        String str[] = myString.split("");
-        for(int i=0; i<str.length; i++){
-            if(str[i].charAt(0)<108){
-                str[i] = (char)108+"";
+        for(int i=0; i<myString.length(); i++){
+            if(myString.charAt(i)<108){
+                answer += "l";
+            }else{
+                answer += myString.charAt(i)+"";
             }
-            answer+=str[i];
         }
         return answer;
     }
