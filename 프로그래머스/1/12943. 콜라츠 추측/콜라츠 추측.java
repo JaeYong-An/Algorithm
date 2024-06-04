@@ -8,9 +8,11 @@ class Solution {
                 num=num*3+1;
             }
             answer++;
-            if(answer==300){
-                answer=-1;
-                break;
+            if(num<=0){
+                return -1;
+            }
+            if(answer==500){
+                return -1;
             }
         }
         return answer;
