@@ -1,24 +1,14 @@
 class Solution {
     public int solution(String my_string) {
-        int answer = 0;
         String str[] = my_string.split(" ");
-        int num1 = Integer.parseInt(str[0]);
-        int num2 = 0;
-        String op = "";
-        for(int i=0; i<str.length; i++){
-            if(i%2==1){
-                op = str[i];
-            }else{
-                num2 = Integer.parseInt(str[i]);
-                if(op.equals("+")){
-                    num1 = num1 + num2;
-                }else if(op.equals("-")){
-                    num1 = num1 - num2;
-                }
+        int answer = Integer.parseInt(str[0]);
+        for(int i=1; i<str.length-1; i=i+2){
+            if(str[i].equals("+")){
+                answer+=Integer.parseInt(str[i+1]);
+            }if(str[i].equals("-")){
+                answer-=Integer.parseInt(str[i+1]);
             }
-            answer = num1;
         }
-        
         return answer;
     }
 }
