@@ -12,6 +12,7 @@ class Solution {
                 }
             }
             answer[0]++;
+            
             if(s.equals("1")){
                 break;
             }
